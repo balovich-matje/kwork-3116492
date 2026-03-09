@@ -82,12 +82,13 @@ body {
 }
 
 .admin-nav {
-    display: flex;
+    display: flex !important;
     gap: 4px;
+    flex-wrap: wrap;
 }
 
 .admin-nav a {
-    color: #94a3b8;
+    color: #94a3b8 !important;
     text-decoration: none;
     padding: 10px 16px;
     border-radius: var(--radius);
@@ -100,17 +101,17 @@ body {
 }
 
 .admin-nav a:hover {
-    color: white;
+    color: white !important;
     background: rgba(255,255,255,0.1);
 }
 
 .admin-nav a.active {
-    color: white;
-    background: var(--primary);
+    color: white !important;
+    background: var(--primary) !important;
 }
 
 .admin-exit {
-    color: #94a3b8;
+    color: #94a3b8 !important;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -121,7 +122,7 @@ body {
 }
 
 .admin-exit:hover {
-    color: white;
+    color: white !important;
     background: rgba(255,255,255,0.1);
 }
 
@@ -149,20 +150,21 @@ body {
 
 /* Admin Section */
 .admin-section {
-    background: white;
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    box-shadow: var(--shadow);
-    border: 1px solid #e2e8f0;
+    background: white !important;
+    border-radius: var(--radius-lg) !important;
+    padding: 28px !important;
+    box-shadow: var(--shadow) !important;
+    border: 1px solid #e2e8f0 !important;
+    margin-bottom: 24px;
 }
 
 .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #f1f5f9;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 24px !important;
+    padding-bottom: 20px !important;
+    border-bottom: 2px solid #f1f5f9 !important;
 }
 
 .section-header h2 {
@@ -247,18 +249,18 @@ body {
 
 .admin-table th,
 .admin-table td {
-    padding: 16px;
-    text-align: left;
-    border-bottom: 1px solid #e2e8f0;
+    padding: 16px !important;
+    text-align: left !important;
+    border-bottom: 1px solid #e2e8f0 !important;
 }
 
 .admin-table th {
-    font-weight: 600;
-    color: var(--gray);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    background: #f8fafc;
+    font-weight: 600 !important;
+    color: var(--gray) !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    background: #f8fafc !important;
 }
 
 .admin-table tbody tr:hover {
