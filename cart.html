@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - ТехноБазар</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">ТехноБазар</span>
+                        <span class="logo-tagline">Б/у техника с гарантией</span>
+                    </div>
+                </a>
+                
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-btn active">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Корзина</h1>
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Корзина</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fas fa-shopping-cart"></i>
+                <h2>Корзина пуста</h2>
+                <p>Добавьте товары в корзину, чтобы оформить заказ</p>
+                <a href="catalog.html" class="btn btn-primary">Перейти в каталог</a>
+            </div>
+            
+            <div class="cart-content" id="cartContent" style="display: none;">
+                <div class="cart-layout">
+                    <!-- Cart Items -->
+                    <div class="cart-items-area">
+                        <div class="cart-items" id="cartItems">
+                            <!-- Cart items loaded by JS -->
+                        </div>
+                        
+                        <div class="cart-actions">
+                            <a href="catalog.html" class="btn btn-outline">
+                                <i class="fas fa-arrow-left"></i> Продолжить покупки
+                            </a>
+                            <button class="btn btn-text" id="clearCart">
+                                <i class="fas fa-trash"></i> Очистить корзину
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Summary -->
+                    <div class="cart-summary">
+                        <h3>Ваш заказ</h3>
+                        
+                        <div class="summary-row">
+                            <span>Товары (<span id="summaryCount">0</span>)</span>
+                            <span id="summarySubtotal">0 ₽</span>
+                        </div>
+                        
+                        <div class="delivery-calculator">
+                            <h4><i class="fas fa-truck"></i> Расчет доставки</h4>
+                            
+                            <div class="calc-field">
+                                <label>Расстояние (км)</label>
+                                <input type="number" id="deliveryDistance" placeholder="Например: 15" min="0">
+                            </div>
+                            
+                            <div class="calc-field">
+                                <label>Этаж</label>
+                                <input type="number" id="deliveryFloor" placeholder="Например: 5" min="1" value="1">
+                            </div>
+                            
+                            <div class="calc-field checkbox">
+                                <label>
+                                    <input type="checkbox" id="hasElevator" checked>
+                                    <span>Есть лифт</span>
+                                </label>
+                            </div>
+                            
+                            <div class="calc-field checkbox">
+                                <label>
+                                    <input type="checkbox" id="needAssembly">
+                                    <span>Нужна сборка/установка</span>
+                                </label>
+                            </div>
+                            
+                            <button class="btn btn-outline btn-sm btn-block" id="calculateDelivery">
+                                Рассчитать
+                            </button>
+                            
+                            <div class="delivery-result" id="deliveryResult" style="display: none;">
+                                <div class="summary-row">
+                                    <span>Доставка:</span>
+                                    <span id="deliveryPrice">0 ₽</span>
+                                </div>
+                                <div class="summary-row" id="floorRow" style="display: none;">
+                                    <span>Подъем без лифта:</span>
+                                    <span id="floorPrice">0 ₽</span>
+                                </div>
+                                <div class="summary-row" id="assemblyRow" style="display: none;">
+                                    <span>Сборка/установка:</span>
+                                    <span id="assemblyPrice">0 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-row summary-total">
+                            <span>Итого:</span>
+                            <span id="summaryTotal">0 ₽</span>
+                        </div>
+                        
+                        <div class="payment-info">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Оплата наличными или картой при получении</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Checkout Form -->
+                <div class="checkout-section">
+                    <h2>Оформление заказа</h2>
+                    <form class="checkout-form" id="checkoutForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customerName">Ваше имя *</label>
+                                <input type="text" id="customerName" required placeholder="Иван Иванов">
+                            </div>
+                            <div class="form-group">
+                                <label for="customerPhone">Телефон *</label>
+                                <input type="tel" id="customerPhone" required placeholder="+7 (999) 123-45-67">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customerEmail">Email</label>
+                            <input type="email" id="customerEmail" placeholder="email@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="deliveryAddress">Адрес доставки *</label>
+                            <textarea id="deliveryAddress" rows="3" required placeholder="Город, улица, дом, квартира"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="orderComment">Комментарий к заказу</label>
+                            <textarea id="orderComment" rows="3" placeholder="Время доставки, пожелания и т.д."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <label>
+                                <input type="checkbox" required>
+                                <span>Я согласен на обработку персональных данных *</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-check"></i> Оформить заказ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Success Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <div class="modal-success">
+                <i class="fas fa-check-circle"></i>
+                <h2>Заказ оформлен!</h2>
+                <p>Спасибо за ваш заказ. Наш менеджер свяжется с вами в ближайшее время для подтверждения.</p>
+                <p class="order-number">Номер заказа: <span id="orderNumber">#12345</span></p>
+                <a href="catalog.html" class="btn btn-primary">Вернуться в каталог</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>ТехноБазар</span>
+                    </div>
+                    <p>Качественная б/у бытовая техника с гарантией.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=refrigerators">Холодильники</a></li>
+                        <li><a href="catalog.html?category=washing-machines">Стиральные машины</a></li>
+                        <li><a href="catalog.html?category=dishwashers">Посудомоечные машины</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ТехноБазар. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

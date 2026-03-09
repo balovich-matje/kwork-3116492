@@ -1,0 +1,202 @@
+{
+  "categories": [
+    {
+      "id": "refrigerators",
+      "name": "Холодильники",
+      "icon": "❄️",
+      "description": "Холодильники и морозильные камеры б/у"
+    },
+    {
+      "id": "washing-machines",
+      "name": "Стиральные машины",
+      "icon": "🧺",
+      "description": "Фронтальные и вертикальные стиралки"
+    },
+    {
+      "id": "dishwashers",
+      "name": "Посудомоечные машины",
+      "icon": "🍽️",
+      "description": "Встраиваемые и отдельностоящие ПММ"
+    },
+    {
+      "id": "ovens",
+      "name": "Духовые шкафы и плиты",
+      "icon": "🔥",
+      "description": "Газовые и электрические плиты"
+    },
+    {
+      "id": "microwaves",
+      "name": "Микроволновки",
+      "icon": "📡",
+      "description": "СВЧ-печи и микроволновые печи"
+    },
+    {
+      "id": "vacuum-cleaners",
+      "name": "Пылесосы",
+      "icon": "🌪️",
+      "description": "Пылесосы всех типов"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Холодильник Samsung RB-30",
+      "category": "refrigerators",
+      "price": 18500,
+      "oldPrice": 32000,
+      "condition": "Отличное",
+      "brand": "Samsung",
+      "year": 2021,
+      "images": ["https://via.placeholder.com/400x400/4a90e2/fff?text=Samsung+RB30"],
+      "description": "Двухкамерный холодильник с инверторным компрессором. Работает идеально, без шума.",
+      "specs": {
+        "Объем": "300 л",
+        "Высота": "185 см",
+        "Цвет": "Серебристый",
+        "Разморозка": "No Frost"
+      },
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Стиральная машина LG F2J3",
+      "category": "washing-machines",
+      "price": 12500,
+      "oldPrice": 24500,
+      "condition": "Хорошее",
+      "brand": "LG",
+      "year": 2020,
+      "images": ["https://via.placeholder.com/400x400/e24a4a/fff?text=LG+F2J3"],
+      "description": "Фронтальная стиральная машина, загрузка 6 кг. 1200 оборотов. Работает без нареканий.",
+      "specs": {
+        "Загрузка": "6 кг",
+        "Отжим": "1200 об/мин",
+        "Класс": "A++",
+        "Глубина": "45 см"
+      },
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Посудомоечная машина Bosch SMS",
+      "category": "dishwashers",
+      "price": 15800,
+      "oldPrice": 28900,
+      "condition": "Отличное",
+      "brand": "Bosch",
+      "year": 2022,
+      "images": ["https://via.placeholder.com/400x400/4ae296/fff?text=Bosch+SMS"],
+      "description": "Отдельностоящая посудомойка на 12 комплектов. Практически новая, использовалась мало.",
+      "specs": {
+        "Комплектов": "12",
+        "Расход воды": "9.5 л",
+        "Уровень шума": "44 дБ",
+        "Сушка": "Турбо"
+      },
+      "popular": false,
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Газовая плита Gorenje GI",
+      "category": "ovens",
+      "price": 8900,
+      "oldPrice": 16500,
+      "condition": "Хорошее",
+      "brand": "Gorenje",
+      "year": 2019,
+      "images": ["https://via.placeholder.com/400x400/e2a84a/fff?text=Gorenje+GI"],
+      "description": "Газовая плита с газовой духовкой. Все конфорки работают, духовка чистая.",
+      "specs": {
+        "Конфорки": "4 газовые",
+        "Духовка": "Газовая",
+        "Ширина": "60 см",
+        "Решетка": "Чугун"
+      },
+      "popular": false,
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "Микроволновка Panasonic NN",
+      "category": "microwaves",
+      "price": 4500,
+      "oldPrice": 8900,
+      "condition": "Отличное",
+      "brand": "Panasonic",
+      "year": 2021,
+      "images": ["https://via.placeholder.com/400x400/9b4ae2/fff?text=Panasonic+NN"],
+      "description": "Соло микроволновка с грилем. 23 литра, инверторное управление.",
+      "specs": {
+        "Объем": "23 л",
+        "Мощность": "1000 Вт",
+        "Гриль": "Есть",
+        "Панель": "Сенсорная"
+      },
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "Холодильник Indesit BIA",
+      "category": "refrigerators",
+      "price": 11200,
+      "oldPrice": 19500,
+      "condition": "Хорошее",
+      "brand": "Indesit",
+      "year": 2020,
+      "images": ["https://via.placeholder.com/400x400/4a90e2/fff?text=Indesit+BIA"],
+      "description": "Надежный двухкамерный холодильник. Все функции работают исправно.",
+      "specs": {
+        "Объем": "250 л",
+        "Высота": "175 см",
+        "Цвет": "Белый",
+        "Энергопотребление": "Класс A+"
+      },
+      "popular": false,
+      "available": true
+    },
+    {
+      "id": 7,
+      "name": "Пылесос Dyson V8",
+      "category": "vacuum-cleaners",
+      "price": 14500,
+      "oldPrice": 28500,
+      "condition": "Отличное",
+      "brand": "Dyson",
+      "year": 2022,
+      "images": ["https://via.placeholder.com/400x400/e24a9b/fff?text=Dyson+V8"],
+      "description": "Беспроводной вертикальный пылесос. Батарея держит отлично, все насадки в комплекте.",
+      "specs": {
+        "Тип": "Беспроводной",
+        "Время работы": "40 мин",
+        "Вес": "2.6 кг",
+        "Контейнер": "0.54 л"
+      },
+      "popular": true,
+      "available": true
+    },
+    {
+      "id": 8,
+      "name": "Электрическая плита Hansa",
+      "category": "ovens",
+      "price": 10200,
+      "oldPrice": 18900,
+      "condition": "Удовлетворительное",
+      "brand": "Hansa",
+      "year": 2018,
+      "images": ["https://via.placeholder.com/400x400/e2a84a/fff?text=Hansa+Electric"],
+      "description": "Электрическая плита со стеклокерамической поверхностью. Небольшие потертости, но работает отлично.",
+      "specs": {
+        "Конфорки": "4 электро",
+        "Поверхность": "Стеклокерамика",
+        "Ширина": "60 см",
+        "Духовка": "Электрическая"
+      },
+      "popular": false,
+      "available": true
+    }
+  ]
+}

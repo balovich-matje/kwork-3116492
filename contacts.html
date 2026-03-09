@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - ТехноБазар</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">ТехноБазар</span>
+                        <span class="logo-tagline">Б/у техника с гарантией</span>
+                    </div>
+                </a>
+                
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="contacts.html" class="active">Контакты</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Контакты</h1>
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Контакты</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts-section">
+        <div class="container">
+            <div class="contacts-layout">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Свяжитесь с нами</h2>
+                    <p>Мы всегда рады помочь вам с выбором техники и ответить на все вопросы.</p>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Телефоны</h4>
+                                <p><a href="tel:+79991234567" id="contactPhone">+7 (999) 123-45-67</a></p>
+                                <p><a href="tel:+79999876543" id="contactPhone2">+7 (999) 987-65-43</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@technobazar.ru" id="contactEmail">info@technobazar.ru</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Адрес</h4>
+                                <p id="contactAddress">г. Москва, ул. Примерная, д. 123</p>
+                                <a href="#map" class="map-link">Смотреть на карте</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Режим работы</h4>
+                                <ul class="working-hours" id="workingHours">
+                                    <li><span>Пн-Пт:</span> 09:00 - 20:00</li>
+                                    <li><span>Сб:</span> 10:00 - 18:00</li>
+                                    <li><span>Вс:</span> 10:00 - 16:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-block">
+                        <h4>Мы в социальных сетях</h4>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link vk" id="socialVk">
+                                <i class="fab fa-vk"></i>
+                                <span>ВКонтакте</span>
+                            </a>
+                            <a href="#" class="social-link telegram" id="socialTelegram">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="#" class="social-link whatsapp" id="socialWhatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3>Напишите нам</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Ваше имя *</label>
+                            <input type="text" id="contactName" required placeholder="Как к вам обращаться?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhoneInput">Телефон *</label>
+                            <input type="tel" id="contactPhoneInput" required placeholder="+7 (999) 123-45-67">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Тема обращения</label>
+                            <select id="contactSubject">
+                                <option value="question">Вопрос о товаре</option>
+                                <option value="order">Оформление заказа</option>
+                                <option value="delivery">Доставка</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Сообщение</label>
+                            <textarea id="contactMessage" rows="4" placeholder="Опишите ваш вопрос..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <h2 class="section-title">Как нас найти</h2>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.371756797787!2d37.6173!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIwLjkiTiAzN8KwMzcnMDIuMyJF!5e0!3m2!1sru!2sru!4v1600000000000!5m2!1sru!2sru"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                id="googleMap">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <div class="modal-success">
+                <i class="fas fa-check-circle"></i>
+                <h2>Сообщение отправлено!</h2>
+                <p>Спасибо за обращение. Мы свяжемся с вами в ближайшее время.</p>
+                <button class="btn btn-primary" onclick="closeModal()">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>ТехноБазар</span>
+                    </div>
+                    <p>Качественная б/у бытовая техника с гарантией.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=refrigerators">Холодильники</a></li>
+                        <li><a href="catalog.html?category=washing-machines">Стиральные машины</a></li>
+                        <li><a href="catalog.html?category=dishwashers">Посудомоечные машины</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ТехноБазар. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/contacts.js"></script>
+</body>
+</html>

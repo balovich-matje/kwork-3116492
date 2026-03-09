@@ -1,0 +1,76 @@
+{
+  "shop": {
+    "name": "ТехноБазар",
+    "tagline": "Б/у бытовая техника с гарантией",
+    "phone": "+7 (999) 123-45-67",
+    "phone2": "+7 (999) 987-65-43",
+    "email": "info@technobazar.ru",
+    "address": "г. Москва, ул. Примерная, д. 123",
+    "workingHours": {
+      "monday": "09:00 - 20:00",
+      "tuesday": "09:00 - 20:00",
+      "wednesday": "09:00 - 20:00",
+      "thursday": "09:00 - 20:00",
+      "friday": "09:00 - 20:00",
+      "saturday": "10:00 - 18:00",
+      "sunday": "10:00 - 16:00"
+    },
+    "mapCoordinates": {
+      "lat": 55.7558,
+      "lng": 37.6173
+    },
+    "social": {
+      "vk": "https://vk.com/technobazar",
+      "telegram": "https://t.me/technobazar",
+      "whatsapp": "https://wa.me/79991234567"
+    }
+  },
+  "delivery": {
+    "zones": [
+      {
+        "name": "Центр",
+        "maxDistance": 5,
+        "pricePerKm": 100,
+        "basePrice": 500
+      },
+      {
+        "name": "Внутри МКАД",
+        "maxDistance": 15,
+        "pricePerKm": 80,
+        "basePrice": 800
+      },
+      {
+        "name": "Ближнее Подмосковье",
+        "maxDistance": 30,
+        "pricePerKm": 60,
+        "basePrice": 1200
+      },
+      {
+        "name": "Дальнее Подмосковье",
+        "maxDistance": 50,
+        "pricePerKm": 50,
+        "basePrice": 1800
+      }
+    ],
+    "floorPrices": {
+      "withElevator": 0,
+      "withoutElevator": {
+        "perFloor": 200,
+        "baseFloor": 3
+      }
+    },
+    "assembly": {
+      "refrigerator": 1500,
+      "washingMachine": 2000,
+      "dishwasher": 2000,
+      "oven": 1500,
+      "microwave": 500,
+      "vacuumCleaner": 0
+    }
+  },
+  "filters": {
+    "conditions": ["Новое", "Отличное", "Хорошее", "Удовлетворительное"],
+    "brands": ["Samsung", "LG", "Bosch", "Indesit", "Gorenje", "Panasonic", "Dyson", "Hansa", "Electrolux", "Whirlpool"],
+    "years": [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017]
+  }
+}

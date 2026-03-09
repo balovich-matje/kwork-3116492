@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка и оплата - ТехноБазар</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-recycle"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">ТехноБазар</span>
+                        <span class="logo-tagline">Б/у техника с гарантией</span>
+                    </div>
+                </a>
+                
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="delivery.html" class="active">Доставка</a>
+                    <a href="contacts.html">Контакты</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Доставка и оплата</h1>
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <span>Доставка и оплата</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Delivery Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Доставка</h3>
+                    <p>Доставляем технику по Москве и Московской области. Стоимость зависит от расстояния и этажа.</p>
+                    <ul>
+                        <li><strong>Центр (до 5 км)</strong> — от 500 ₽</li>
+                        <li><strong>Внутри МКАД</strong> — от 800 ₽</li>
+                        <li><strong>Ближнее Подмосковье</strong> — от 1200 ₽</li>
+                        <li><strong>Дальнее Подмосковье</strong> — от 1800 ₽</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3>Подъем на этаж</h3>
+                    <p>Поднимем технику на любой этаж. При наличии лифта — бесплатно!</p>
+                    <ul>
+                        <li><strong>С лифтом</strong> — бесплатно</li>
+                        <li><strong>Без лифта</strong> — 200 ₽/этаж (начиная с 3-го)</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Сборка и установка</h3>
+                    <p>Профессиональная установка техники с проверкой работоспособности.</p>
+                    <ul>
+                        <li><strong>Холодильник</strong> — 1500 ₽</li>
+                        <li><strong>Стиральная машина</strong> — 2000 ₽</li>
+                        <li><strong>Посудомоечная машина</strong> — 2000 ₽</li>
+                        <li><strong>Плита/духовка</strong> — 1500 ₽</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Оплата</h3>
+                    <p>Удобные способы оплаты при получении товара.</p>
+                    <ul>
+                        <li><strong>Наличными</strong> — курьеру при доставке</li>
+                        <li><strong>Банковской картой</strong> — через терминал</li>
+                        <li><strong>Переводом</strong> — на карту или по QR-коду</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-box">
+                <h2><i class="fas fa-calculator"></i> Калькулятор доставки</h2>
+                <p>Рассчитайте стоимость доставки и дополнительных услуг</p>
+                
+                <div class="calculator-form">
+                    <div class="calc-row">
+                        <div class="calc-field">
+                            <label>Расстояние от МКАД (км)</label>
+                            <input type="number" id="calcDistance" placeholder="Например: 15" min="0">
+                        </div>
+                        <div class="calc-field">
+                            <label>Этаж</label>
+                            <input type="number" id="calcFloor" placeholder="Например: 5" min="1" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="calc-row">
+                        <div class="calc-field">
+                            <label>Тип техники</label>
+                            <select id="calcCategory">
+                                <option value="">Выберите категорию</option>
+                                <option value="refrigerator">Холодильник</option>
+                                <option value="washingMachine">Стиральная машина</option>
+                                <option value="dishwasher">Посудомоечная машина</option>
+                                <option value="oven">Духовка/Плита</option>
+                                <option value="microwave">Микроволновка</option>
+                                <option value="vacuumCleaner">Пылесос</option>
+                            </select>
+                        </div>
+                        <div class="calc-field checkbox-field">
+                            <label>
+                                <input type="checkbox" id="calcElevator" checked>
+                                <span>Есть лифт</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="calc-row">
+                        <div class="calc-field checkbox-field">
+                            <label>
+                                <input type="checkbox" id="calcAssembly">
+                                <span>Нужна сборка/установка</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" id="calcButton">
+                        <i class="fas fa-calculator"></i> Рассчитать
+                    </button>
+                    
+                    <div class="calculator-result" id="calcResult" style="display: none;">
+                        <h3>Результат расчета</h3>
+                        <div class="result-items">
+                            <div class="result-item">
+                                <span>Доставка:</span>
+                                <strong id="resultDelivery">0 ₽</strong>
+                            </div>
+                            <div class="result-item" id="resultFloorRow">
+                                <span>Подъем без лифта:</span>
+                                <strong id="resultFloor">0 ₽</strong>
+                            </div>
+                            <div class="result-item" id="resultAssemblyRow">
+                                <span>Сборка/установка:</span>
+                                <strong id="resultAssembly">0 ₽</strong>
+                            </div>
+                        </div>
+                        <div class="result-total">
+                            <span>Итого:</span>
+                            <strong id="resultTotal">0 ₽</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Готовы сделать заказ?</h2>
+                <p>Выберите технику в каталоге или свяжитесь с нами для консультации</p>
+                <div class="cta-buttons">
+                    <a href="catalog.html" class="btn btn-primary">Смотреть каталог</a>
+                    <a href="tel:+79991234567" class="btn btn-outline">
+                        <i class="fas fa-phone"></i> Позвонить
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <span>ТехноБазар</span>
+                    </div>
+                    <p>Качественная б/у бытовая техника с гарантией.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=refrigerators">Холодильники</a></li>
+                        <li><a href="catalog.html?category=washing-machines">Стиральные машины</a></li>
+                        <li><a href="catalog.html?category=dishwashers">Посудомоечные машины</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ТехноБазар. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/delivery-calc.js"></script>
+</body>
+</html>
