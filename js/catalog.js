@@ -200,7 +200,7 @@ function loadYearFilter() {
     if (!container) return;
     
     const config = DataManager.getConfig();
-    const years = config.filters?.years || [2024, 2023, 2022, 2021];
+    const years = config.filters?.years || [2026, 2025, 2024, 2023];
     
     container.innerHTML = years.map(year => `
         <label class="filter-checkbox">
