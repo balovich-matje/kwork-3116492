@@ -57,7 +57,7 @@ function loadProducts() {
         return `
             <tr>
                 <td>${product.id}</td>
-                <td><img src="${product.images?.[0] || '../images/no-image.jpg'}" alt="" width="50"></td>
+                <td><img src="${product.images?.[0] ? '../' + product.images[0] : 'https://via.placeholder.com/50x50?text=No+Image'}" alt="" width="50" height="50" style="object-fit: cover; border-radius: 6px;"></td>
                 <td>${product.name}</td>
                 <td>${category?.name || product.category}</td>
                 <td>${formatPrice(product.price)}</td>
