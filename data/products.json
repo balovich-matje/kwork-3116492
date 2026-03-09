@@ -47,7 +47,7 @@
       "condition": "Отличное",
       "brand": "Samsung",
       "year": 2021,
-      "images": ["https://via.placeholder.com/400x400/4a90e2/fff?text=Samsung+RB30"],
+      "images": ["images/products/refrigerator-samsung-rb30.jpg"],
       "description": "Двухкамерный холодильник с инверторным компрессором. Работает идеально, без шума.",
       "specs": {
         "Объем": "300 л",
@@ -67,7 +67,7 @@
       "condition": "Хорошее",
       "brand": "LG",
       "year": 2020,
-      "images": ["https://via.placeholder.com/400x400/e24a4a/fff?text=LG+F2J3"],
+      "images": ["images/products/washing-machine-lg-f2j3.avif"],
       "description": "Фронтальная стиральная машина, загрузка 6 кг. 1200 оборотов. Работает без нареканий.",
       "specs": {
         "Загрузка": "6 кг",
@@ -87,7 +87,7 @@
       "condition": "Отличное",
       "brand": "Bosch",
       "year": 2022,
-      "images": ["https://via.placeholder.com/400x400/4ae296/fff?text=Bosch+SMS"],
+      "images": ["images/products/dishwasher-bosch-sms.jpg"],
       "description": "Отдельностоящая посудомойка на 12 комплектов. Практически новая, использовалась мало.",
       "specs": {
         "Комплектов": "12",
@@ -107,7 +107,7 @@
       "condition": "Хорошее",
       "brand": "Gorenje",
       "year": 2019,
-      "images": ["https://via.placeholder.com/400x400/e2a84a/fff?text=Gorenje+GI"],
+      "images": ["images/products/oven-gorenje-gi.jpg"],
       "description": "Газовая плита с газовой духовкой. Все конфорки работают, духовка чистая.",
       "specs": {
         "Конфорки": "4 газовые",
@@ -127,7 +127,7 @@
       "condition": "Отличное",
       "brand": "Panasonic",
       "year": 2021,
-      "images": ["https://via.placeholder.com/400x400/9b4ae2/fff?text=Panasonic+NN"],
+      "images": ["images/products/microwave-panasonic-nn.jpg"],
       "description": "Соло микроволновка с грилем. 23 литра, инверторное управление.",
       "specs": {
         "Объем": "23 л",
@@ -147,7 +147,7 @@
       "condition": "Хорошее",
       "brand": "Indesit",
       "year": 2020,
-      "images": ["https://via.placeholder.com/400x400/4a90e2/fff?text=Indesit+BIA"],
+      "images": ["images/products/refrigerator-indesit-bia.jpg"],
       "description": "Надежный двухкамерный холодильник. Все функции работают исправно.",
       "specs": {
         "Объем": "250 л",
@@ -167,7 +167,7 @@
       "condition": "Отличное",
       "brand": "Dyson",
       "year": 2022,
-      "images": ["https://via.placeholder.com/400x400/e24a9b/fff?text=Dyson+V8"],
+      "images": ["images/products/vacuum-dyson-v8.jpg"],
       "description": "Беспроводной вертикальный пылесос. Батарея держит отлично, все насадки в комплекте.",
       "specs": {
         "Тип": "Беспроводной",
@@ -187,7 +187,7 @@
       "condition": "Удовлетворительное",
       "brand": "Hansa",
       "year": 2018,
-      "images": ["https://via.placeholder.com/400x400/e2a84a/fff?text=Hansa+Electric"],
+      "images": ["images/products/oven-hansa.jpg"],
       "description": "Электрическая плита со стеклокерамической поверхностью. Небольшие потертости, но работает отлично.",
       "specs": {
         "Конфорки": "4 электро",
